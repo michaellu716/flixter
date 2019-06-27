@@ -2,17 +2,14 @@
 html {
   height: 100%;
 }
-
 body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
-
 #flex-content-container {
   flex: 1;
 }
-
 #footer {
   position: relative;
   width: 100%;
@@ -78,7 +75,6 @@ body {
 .booyah-box h2, .booyah-box h1 {
   margin: 10px;
 }
-
 .help-block {
   color: #ff3333;
   background-color: #FFEEEE;
@@ -86,3 +82,26 @@ body {
   padding: 2px 8px 2px 8px;
   margin: 10px;
 }
+.lesson {
+  background-color: black;
+  margin-top: 10px;
+  height: 130px;
+}
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+.lesson a {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  font-size: 15px;
+}
+.lesson a b {
+  font-weight: 100;
+  font-size: 25px;
+}
+
+
+
