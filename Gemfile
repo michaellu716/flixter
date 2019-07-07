@@ -30,6 +30,7 @@ gem "figaro"
 gem "fog-aws"
 gem 'ranked-model'
 gem "mini_magick"
+gem 'jquery-ui-rails'
 gem 'carrierwave-aws'
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem 'stripe'
