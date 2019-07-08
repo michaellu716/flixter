@@ -4,6 +4,7 @@ class Instructor::LessonsController < ApplicationController
   before_action :require_authorized_for_current_lesson, only: [:update]
 
   def new
+    @section = Section.find(params[:section_id])
     @lesson = Lesson.new
   end
 
