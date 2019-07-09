@@ -10,7 +10,7 @@
   <div class="row"> 
    <div class="col-sm-4 col-12 text-center">
   	 <span class="badge badge-default">
-     <%= number_to_currency @course.cost %>
+     COST: <%= number_to_currency @course.cost %>
  	</span>
  	<% if current_user && current_user == @course.user %>
       <br />

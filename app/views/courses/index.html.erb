@@ -8,14 +8,14 @@
      <h2 class="text-center">
       <%= link_to course.title, course_path(course) %>
     </h2>
-     <%# if course.image.present? %>
-       <%#= image_tag @course.image.url, class: 'img-fluid' %>
-     <%# end %>
+      <% if course.image.present? %>
+         <%= image_tag course.image.url, class: 'img-fluid' %>
+      <% end %>
     <div class="col-sm-8 col-12">
       <%= course.description %>
     </div>
     <div class="row">
-	    <div class="col-sm-4 col-12 text-center">
+	    <div class="col-sm-4 col-12">
 	       <%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large' %>
 	    </div>
 	</div>
