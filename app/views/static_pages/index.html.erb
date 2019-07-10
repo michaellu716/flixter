@@ -1,15 +1,17 @@
-<div class="hero">
-<br />
-  <div class="frosty col-10 offset-1 text-center">
-	   <br />
-    <h1>Learn Magic from the Pros</h1>
-    <br />
-    <h2>I'm an illusionist, Michael.</h2>
-    <br />
-     <%= link_to 'Learn More', courses_path, class: 'btn btn-success' %>
-    <br /><br />
+<!--Banner-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+       <%= image_tag 'elearning.jpg', class: 'd-block img-fluid' %>
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Learn anything on your schedule!</h3>
+          <%= link_to 'View Courses', courses_path, class: "btn btn-lg btn-success" %>
+       </div>
+    </div>
   </div>
 </div>
+<!-- End of Banner-->
+
 <br />
 <div class="row feature text-center">
   <div class="col-12 col-sm">
