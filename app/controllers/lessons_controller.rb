@@ -15,8 +15,8 @@ class LessonsController < ApplicationController
 	end
 
 	def require_authorized_for_current_lesson
-    	if current_user.enrolled_in?(@course)
-    		 redirect_to courses_path, alert: 'register for the course'
+    	unless current_user.enrolled_in?(current_lesson.section.course)
+    		 redirect_to courses_path(current_lesson.section.course), alert: 'register for the course'
     	end
     end
 
