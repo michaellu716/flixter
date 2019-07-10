@@ -43,6 +43,9 @@
                       <span class="badge badge-default">
                         PRICE: <%= number_to_currency course.cost %>
                       </span>
+                      <span class="badge badge-default">
+                      INSTRUCTOR: <%= course.user.email %>
+                      </span>
                     </p>
                     <p class="text-center"><%= link_to 'More Details...', course_path(course), class: 'btn btn-primary btn-large' %></p>
                   </div>
@@ -54,3 +57,5 @@
         </div>
       </div>
 </div>
+
+
