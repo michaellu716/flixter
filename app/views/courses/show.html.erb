@@ -2,16 +2,28 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= @course.title %></h1>
-  <div class="col-md-12 text-center">
+  <!--Banner-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+       
+        <% if @course.image.present? %>
+          <%= image_tag @course.image.url, class: 'd-block img-fluid' %>
+        <% end %>
+        <div class="carousel-caption d-none d-md-block">
+          <h3><%= @course.title %></h3>
+       </div>
+    </div>
+  </div>
+</div>
+<!-- End of Banner-->
+  <br />
+  
+   <div class="col-md-12 text-center">
     <% if current_user && current_user == @course.user %>
            <%= link_to 'Teacher Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
     <% end %>
   </div>
-  <br />
-  <% if @course.image.present? %>
-    <%= image_tag @course.image.url, class: 'img-fluid' %>
-  <% end %>
-   <br />
   <div class="row">
       <div class="col-md-12 text-center">
          <%= @course.description %>
@@ -25,7 +37,9 @@
         <h3 class="badge badge-info">You Are Enrolled!</h3>
         <% else %>
            <% if @course.free? %>
-                <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+                <div class="col-md-12">
+                  <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+                </div>
             <br /><br />  
             <% else %>  
              <%= form_tag course_enrollments_path(@course) do %>
