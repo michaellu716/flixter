@@ -36,7 +36,7 @@
                   <div class="card-veiw">
                     <h2 class="text-center"><%= link_to course.title, course_path(course) %></h2>
                     <% if course.image.present? %>
-                      <%= image_tag course.image.url, class: 'img-fluid' %>
+                      <%= link_to image_tag(course.image.url), course_path(course) %>
                     <% end %>
                     <p class="text-center"><%= course.description %></p>
                     <p class="text-center">
@@ -57,5 +57,14 @@
         </div>
       </div>
 </div>
+
+<style>
+  img{
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 
 
