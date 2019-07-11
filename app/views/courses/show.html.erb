@@ -1,4 +1,10 @@
 <br />
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= @course.title %></h1>
@@ -94,3 +100,4 @@
     color:white;
   }
 </style>
+
